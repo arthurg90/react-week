@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Header from "./Header";
 import Paragraph from "./Paragraph";
@@ -7,7 +7,7 @@ import People from "./People";
 
 
 
-const App = () => (
+const Stuff = () => (
     <div>
       <Header />          
       <Paragraph />
@@ -16,4 +16,4 @@ const App = () => (
     </div>  
 );
 
-export default App;
+export default Stuff;
