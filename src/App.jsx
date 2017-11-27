@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import Header from "./Header";
-import Paragraph from "./Paragraph";
-import Square from "./Square";
-import People from "./People";
+import Header from "./tricksy-app/Header";
+import Aside from "./tricksy-app/Aside";
+import Paragraph from "./tricksy-app/Paragraph";
 
 
 
 const App = () => (
     <div>
       <Header />          
+      <Aside />
       <Paragraph />
-      <Square />
-      <People />
     </div>  
 );
 
