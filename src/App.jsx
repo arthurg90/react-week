@@ -1,16 +1,11 @@
 import React from 'react';
 
-import Header from "./tricksy-app/Header";
-import Aside from "./tricksy-app/Aside";
-import Paragraph from "./tricksy-app/Paragraph";
-
+import Content from "./Content";
 
 
 const App = () => (
     <div>
-      <Header />          
-      <Aside />
-      <Paragraph />
+      <Content />
     </div>  
 );
 

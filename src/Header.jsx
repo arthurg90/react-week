@@ -1,9 +1,10 @@
 import React from "react";
 
-// we use className to add classes for Bootstrap styling
-const Header = () => (
+const Header = ({ children }) => (
     <header className="page-header">
-        <h1>Hello, world</h1>
+        <h1>
+        	{ children }
+        </h1>
     </header>
 );
 
