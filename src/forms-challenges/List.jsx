@@ -14,13 +14,14 @@ class List extends Component {
 
 update(e) {												//event handler for input upating (e) object is needed for updating reference
   
-    this.setState({ value: e.target.value });
+    this.setState({ value: e.target.value });			//e.target.value is a constant representing the input value and will always be the same
+
 }
 
-clicked() {											//event handler for clicking add button
+clicked() {												//event handler for clicking add button
 	let arrayCopy = this.state.array.slice();			//copying the array so that things are added, not overwritten in the array
-	arrayCopy.push(this.state.value);
-	this.setState({array: arrayCopy});					//set state to this ccopied array
+	arrayCopy.push(this.state.value);					//takes input values and sticks them into the array
+	this.setState({array: arrayCopy});					//set state to this copied array
 }
 
 
@@ -34,7 +35,7 @@ render() {
 
         return (
             <div className="form-group">
-                <input onChange={ this.update } value={this.state.value} className="form-control" />		
+                <input onChange={ this.update } className="form-control" />		
                 <button onClick={ this.clicked }>Add</button> 
                 <ul> 
                     {listItems}					

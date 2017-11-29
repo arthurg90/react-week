@@ -1,4 +1,5 @@
-// state App
+// state exercice
+// ---------------------------------------------------------------------------------------------------------------
 // import React from "react";
 // import Header from "./Header";
 // import Paragraph from "./Paragraph";
@@ -30,12 +31,13 @@
 
 // export default App;
 
-// forms app
-
+// forms Exertcises
+// ------------------------------------------------------------------------------------------------------------------
 import React from "react";
 import Length from "./forms-challenges/Length";
 import List	from "./forms-challenges/List";
-import Adder from "./forms-challenges/Adder"
+import Adder from "./forms-challenges/Adder";
+import TempConverter from "./forms-challenges/TempConverter"
 
 
 const App = () => (
@@ -43,7 +45,27 @@ const App = () => (
 	    <Length />
 	    <List />
 	    <Adder />
+	    <TempConverter />
 	</div>
 );
 
 export default App;
+
+
+
+// Lifting states
+// ------------------------------------------------------------------------------------------------------------------
+
+
+
+// import React, { Component } from "react";
+// import Buttons from "./lifting-state-challenges/Buttons";
+
+// const App = () => (
+//     <div>
+// 	    <Buttons />	    
+// 	</div>
+// );
+
+
+// export default App;
