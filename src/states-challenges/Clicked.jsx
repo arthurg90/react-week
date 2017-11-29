@@ -1,23 +1,3 @@
-// import React, { Component } from "react";
-
-// class Clicked extends Component {
-//     clicked() {
-//     	<h1>Click Box</h1>;
-//     }
-
-//     render() {
-//         return (
-//             <div className="jumbotron" onClick={ this.clicked }>
-//                 <h1>Not Clicked</h1>
-//             </div>
-//         );
-//     }
-// }
-
-// export default Clicked;
-
-
-
 import React, { Component } from "react";
 
 class Clicked extends Component {
