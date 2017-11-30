@@ -5,6 +5,7 @@ export default ({ name, selected, onClick }) => (
         className={ "btn " + (selected ? "btn-danger" : "btn-primary") }
         onClick={ onClick }
     >
-        { name }
+    	{ name }
+    	
     </button>
 );

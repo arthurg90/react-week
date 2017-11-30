@@ -33,23 +33,23 @@
 
 // forms Exertcises
 // ------------------------------------------------------------------------------------------------------------------
-import React from "react";
-import Length from "./forms-challenges/Length";
-import List	from "./forms-challenges/List";
-import Adder from "./forms-challenges/Adder";
-import TempConverter from "./forms-challenges/TempConverter"
+// import React from "react";
+// import Length from "./forms-challenges/Length";
+// import List	from "./forms-challenges/List";
+// import Adder from "./forms-challenges/Adder";
+// import TempConverter from "./forms-challenges/TempConverter"
 
 
-const App = () => (
-    <div>
-	    <Length />
-	    <List />
-	    <Adder />
-	    <TempConverter />
-	</div>
-);
+// const App = () => (
+//     <div>
+// 	    <Length />
+// 	    <List />
+// 	    <Adder />
+// 	    <TempConverter />
+// 	</div>
+// );
 
-export default App;
+// export default App;
 
 
 
@@ -58,14 +58,15 @@ export default App;
 
 
 
-// import React, { Component } from "react";
-// import Buttons from "./lifting-state-challenges/Buttons";
-
-// const App = () => (
-//     <div>
-// 	    <Buttons />	    
-// 	</div>
-// );
+import React, { Component } from "react";
+import Buttons from "./lifting-state-challenges/Buttons";
 
 
-// export default App;
+const App = () => (
+    <div>
+	    <Buttons />	    
+	</div>
+);
+
+
+export default App;

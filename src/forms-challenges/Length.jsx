@@ -5,7 +5,7 @@ import React, { Component } from "react";
 class Length extends Component {
 	constructor(props) {
 	    super(props);
-	    this.state = { value: "Put something in me" };
+	    this.state = { value: "Enter something" };
         this.update = this.update.bind(this);
 
 	}
