@@ -2,10 +2,10 @@
 
 import React from "react";
 
-export default ({ selected, onClick }) => (
+export default ({ selected, onClick, colour }) => (
     <div 
     onClick={ onClick } 
-    style={{ background: "yellow", width: "200px", height: "200px", border: "2px solid", borderColor: selected ? "red" : "black" }}
+    style={{ background: colour, width: "200px", height: "200px", border: "2px solid", borderColor: selected ? "red" : "black" }}
     >
     </div>
 

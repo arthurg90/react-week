@@ -79,16 +79,17 @@ import FourOhFour from "./react-router/FourOhFour"
 
 const App = () => (
 	<Router>
-	   <div>
-		   <Switch>
+		<div>
+			<Switch>
 			   <Route exact path="/" component={ Header }/>	 
 			   <Route path="/buttons" component={ Buttons }/>	 
-			   <Route path="/squares" component={ Squares }/>	 
+			   <Route path="/squares/:colour" render={ ({ match }) => (
+    <Squares colour={ match.params.colour } /> )} />	 
 			   <Route path="/form" component={ Form }/>
 			   <Route component={ FourOhFour }/>
-		   </Switch>   
+			</Switch>   
 		   <Links />
-	   </div>
+		</div>
 
 	</Router>
 );

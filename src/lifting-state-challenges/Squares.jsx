@@ -13,13 +13,14 @@ class Squares extends Component {
 
     clicked(square) {
         this.setState({ selected: square })
+
     }
 
     render() {
         return (
         	<div>	
-	        	<Square selected={ this.state.selected == 1 } onClick={ () => this.clicked(1) } />
-	        	<Square selected={ this.state.selected == 2 } onClick={ () => this.clicked(2) } />
+	        	<Square colour={ this.props.colour } selected={ this.state.selected == 1 } onClick={ () => this.clicked(1) } />
+	        	<Square colour={ this.props.colour } selected={ this.state.selected == 2 } onClick={ () => this.clicked(2) } />
 	        </div>	
         );
     }
