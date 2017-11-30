@@ -56,17 +56,44 @@
 // Lifting states
 // ------------------------------------------------------------------------------------------------------------------
 
-
-
 import React, { Component } from "react";
-import Buttons from "./lifting-state-challenges/Buttons";
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch
+} from "react-router-dom";
 
+import { Link } from "react-router-dom";
+
+import Header from "./lifting-state-challenges/Header";
+import Buttons from "./lifting-state-challenges/Buttons";
+import Squares from "./lifting-state-challenges/Squares";
+import Form from "./lifting-state-challenges/Form"
+import Links from "./react-router/Links"
+import FourOhFour from "./react-router/FourOhFour"
+
+
+
+// import Password from "./lifting-state-challenges/Password";
+// import Signup from "./lifting-state-challenges/Signup";
 
 const App = () => (
-    <div>
-	    <Buttons />	    
-	</div>
+	<Router>
+	   <div>
+		   <Switch>
+			   <Route exact path="/" component={ Header }/>	 
+			   <Route path="/buttons" component={ Buttons }/>	 
+			   <Route path="/squares" component={ Squares }/>	 
+			   <Route path="/form" component={ Form }/>
+			   <Route component={ FourOhFour }/>
+		   </Switch>   
+		   <Links />
+	   </div>
+
+	</Router>
 );
 
 
-export default App;
+export default App; 
+
+

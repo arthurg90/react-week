@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+
+
 
 class Buttons extends Component {
     constructor(props) {
@@ -15,12 +18,14 @@ class Buttons extends Component {
 
     render() {
         return (
-            <div>
-                <Button selected={ this.state.selected == 1 } name="First" onClick={ () => this.clicked(1) } /> 
-                <Button selected={ this.state.selected == 2 } name="Second" onClick={ () => this.clicked(2) } />
-                <Button selected={ this.state.selected == 3 } name="Third" onClick={ () => this.clicked(3) } />
-                <Button selected={ this.state.selected == 4 } name="Fourth" onClick={ () => this.clicked(4) } />
-            </div>    
+           <div>
+               <Button selected={ this.state.selected == 1 } name="First" onClick={ () => this.clicked(1) } /> 
+               <Button selected={ this.state.selected == 2 } name="Second" onClick={ () => this.clicked(2) } />
+               <Button selected={ this.state.selected == 3 } name="Third" onClick={ () => this.clicked(3) } />
+               <Button selected={ this.state.selected == 4 } name="Fourth" onClick={ () => this.clicked(4) } />
+           </div>
+
+           
         );
     }
 }
