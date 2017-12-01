@@ -7,7 +7,6 @@ export default ({ name, selected, onClick }) => (
         onClick={ onClick }
     >
     	{ name }
-
     	
     </button>
 

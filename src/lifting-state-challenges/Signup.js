@@ -1,3 +1,5 @@
+// Create a component <Password label="Password"> that contains an <input> with a <label>. Inside a <SignUp minimumLength={ 12 }> component put two <Password> components: one should have the label "Password" and the other "Confirm Password". Both <Password> components should have a red border unless they are longer than minimumLength and match each other.
+
 import React, { Component } from "react";
 import Password from "./Password";
 
@@ -7,17 +9,16 @@ class Signup extends Component {
 
         this.state = {
             inputs: [
-                { label: "Name", value: "Test" },
-                { label: "Email", value: "blah@blah.com" },
+                { label: "Password", value: "" },
+                { label: "Confirm Password", value: "" },
             ], 
         };
-    }
+    } 
 
     update(index, value) {
     // get a copy of the current inputs array
     let inputs = this.state.inputs.slice();
 
-    // update the value of the input with the given index
     inputs[index].value = value;
 
     // save the state
@@ -30,7 +31,7 @@ class Signup extends Component {
     return (
         <form>
             { this.state.inputs.map(({label, value}, i) => (
-                <Input
+                <Password
                     key={ i }
                     label={ label }
                     value={ value }

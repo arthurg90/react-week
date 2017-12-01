@@ -1,4 +1,4 @@
-// state exercice
+// state exercise
 // ---------------------------------------------------------------------------------------------------------------
 // import React from "react";
 // import Header from "./Header";
@@ -71,29 +71,33 @@ import Squares from "./lifting-state-challenges/Squares";
 import Form from "./lifting-state-challenges/Form"
 import Links from "./react-router/Links"
 import FourOhFour from "./react-router/FourOhFour"
+import StepCounter from "./states-challenges/StepCounter";
+import Signup from "./lifting-state-challenges/Signup"
 
-
-
-// import Password from "./lifting-state-challenges/Password";
-// import Signup from "./lifting-state-challenges/Signup";
 
 const App = () => (
 	<Router>
 		<div>
 			<Switch>
 			   <Route exact path="/" component={ Header }/>	 
-			   <Route path="/buttons" component={ Buttons }/>	 
-			   <Route path="/squares/:colour" render={ ({ match }) => (
-    <Squares colour={ match.params.colour } /> )} />	 
+			   <Route path="/buttons" component={ Buttons }/>
+			   <Route exact path="/squares" component={ Squares }/>
+			   <Route exact path="/squares/:colour" render={ ({ match }) => (
+    <Squares colour={ match.params.colour } /> )} />	
+			   <Route exact path="/steps" component={ StepCounter }/>
+			   <Route exact path="/steps/:step/:max" render={ ({ match }) => (
+    <StepCounter step={ match.params.step } max={ match.params.max } /> )} />	 
 			   <Route path="/form" component={ Form }/>
 			   <Route component={ FourOhFour }/>
-			</Switch>   
-		   <Links />
+			</Switch>  
+			<br />
+		    <Signup minimumLength={ 12 } />
+		    <Links />
+
 		</div>
 
 	</Router>
 );
-
 
 export default App; 
 

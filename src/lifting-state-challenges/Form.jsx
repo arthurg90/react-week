@@ -13,6 +13,7 @@ class Form extends Component {
         };
     }
 
+
     update(index, value) {
     // get a copy of the current inputs array
     let inputs = this.state.inputs.slice();
