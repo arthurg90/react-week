@@ -29,5 +29,5 @@ class Buttons extends Component {
         );
     }
 }
-
+ 
 export default Buttons;

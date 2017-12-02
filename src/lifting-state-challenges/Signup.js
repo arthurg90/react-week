@@ -18,6 +18,7 @@ class Signup extends Component {
     update(index, value) {
     // get a copy of the current inputs array
     let inputs = this.state.inputs.slice();
+    let { minimumLength } = this.props;
 
     inputs[index].value = value;
 
@@ -35,18 +36,9 @@ class Signup extends Component {
                     key={ i }
                     label={ label }
                     value={ value }
-
-                    // we need to use an inline function so that we
-                    // can pass in a different value of i for each input
                     onChange={ (e) => this.update(i, e.target.value) }
                 />
             ))}
-
-            <button
-                disabled={ !this.state.inputs.every(({ value }) => value) }
-            >
-                Submit
-            </button>
         </form>
     );
     }
